@@ -23,7 +23,21 @@ console.log(kafeNamn)
 //       Typerna heter string, number, boolean, undefined och null
 // TODO: skriv ut typeof för alla fem på en rad (tips: separera med komma)
 // TODO: prova att ge number-variabeln en text. Vad säger TypeScript?
-
+const stingVar: string = 'Detta är en text'
+const numberVar: number = 42
+const booleanVar: boolean = true
+let undefinedVar: undefined
+let nullVar: null = null
+console.log(
+    typeof stingVar,
+    typeof numberVar,
+    typeof booleanVar,
+    typeof undefinedVar,
+    typeof nullVar
+)
+let numberVar2: number = 42
+numberVar2 = 'hej'
+//Type ‘string’ is not assignable to type 'number'
 // STEG 4 ------------------------------------------------------------
 // TODO: räkna ut summa = antalBullar * prisBulle + antalKaffe * prisKaffe
 // TODO: räkna ut momsDel (12 % ingår i priset): summa * 0.12 / 1.12
