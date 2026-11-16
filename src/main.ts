@@ -35,8 +35,7 @@ console.log(
     typeof undefinedVar,
     typeof nullVar
 )
-let numberVar2: number = 42
-numberVar2 = 'hej'
+
 //Type ‘string’ is not assignable to type 'number'
 // STEG 4 ------------------------------------------------------------
 // TODO: räkna ut summa = antalBullar * prisBulle + antalKaffe * prisKaffe
@@ -44,11 +43,21 @@ numberVar2 = 'hej'
 // TODO: skriv ut "Summa: ... kr" och "Varav moms (12 %): ... kr"
 //       Moms ska ha två decimaler (toFixed(2))
 //       Håll musen över momsDel.toFixed(2). Vilken typ ger toFixed?
-
+const summa: number = antalBullar * prisBulle + antalKaffe * prisKaffe
+const momsDel: string = ((summa * 0.12) / 1.12).toFixed(2)
+console.log(`Summa: ${summa} kr`)
+console.log(`Varav moms (12 %): ${momsDel} kr`)
+// Returns a string representing a number in fixed-point notation.
 // STEG 5 ------------------------------------------------------------
 // TODO: skapa ärStudent (boolean, true). Om ärStudent är true: rabatt 10 %.
 // TODO: räkna ut attBetala (number) och skriv ut "Att betala: ... kr"
+const ärStudent: boolean = true
+let attBetala: number = summa
 
+if (ärStudent) {
+    attBetala = summa * 0.9
+}
+console.log(`Att betala: ${attBetala} kr`)
 // STEG 6 ------------------------------------------------------------
 // TODO: skapa veckodag (string, "lördag") och klockslag (number, 15)
 // TODO: avgör om kaféet är öppet (boolean): vardagar 7–18, helger 9–16
